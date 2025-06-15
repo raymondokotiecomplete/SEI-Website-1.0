@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Youth Development Centre</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+    header, section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    nav {
+      background: #1a237e;
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #ffd700;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #1a237e;
+    }
+    p {
+      color: #555;
+      font-size: 1.1em;
+    }
+    .btn {
+      background: #ffd700;
+      color: #1a237e;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .section-light {
+      background-color: #f0f4ff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #1a237e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>Youth Dev Centre</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
+      <a href="#blog">Blog</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <header class="section-light">
+    <div class="container">
+      <h1>Empowering Youth Through Skills That Build Futures</h1>
+      <p>We offer hands-on vocational training, mentorship, and real-world opportunities to help young people thrive.</p>
+      <a href="#contact" class="btn">Get Involved</a>
+    </div>
+  </header>
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>The Youth Development Centre equips young people with practical skills, mentorship, and opportunities to become self-reliant entrepreneurs and future-ready leaders.</p>
+    </div>
+  </section>
+  <section id="services" class="section-light">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="card"><h3>Vocational Training</h3><p>Tailoring, carpentry, catering, and more.</p></div>
+        <div class="card"><h3>Digital Skills</h3><p>Graphic design, web development, AI tools, etc.</p></div>
+        <div class="card"><h3>Mentorship</h3><p>Guidance and motivation from industry mentors.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="programmes">
+    <div class="container">
+      <h2>Our Programmes</h2>
+      <div class="grid">
+        <div class="card"><h3>Start & Earn Bootcamp</h3><p>Learn a skill and monetize it quickly.</p></div>
+        <div class="card"><h3>Tech for Girls</h3><p>Empowering young girls with digital skills.</p></div>
+        <div class="card"><h3>Entrepreneurship Lab</h3><p>Hands-on business building support and coaching.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="section-light">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="grid gallery-grid">
+        <div><img src="images/training1.jpg" alt="Training Session"/></div>
+        <div><img src="images/product1.jpg" alt="Product Showcase"/></div>
+        <div><img src="images/event1.jpg" alt="Community Event"/></div>
+      </div>
+    </div>
+  </section>
+  <section id="team">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="grid">
+        <div class="card"><h3>Raymond Oke Okotie</h3><p>Founder & Visionary Leader</p></div>
+        <div class="card"><h3>Jane Doe</h3><p>Program Coordinator</p></div>
+        <div class="card"><h3>Michael Smith</h3><p>Training Supervisor</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="section-light">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="grid">
+        <div class="card"><h3>Who can register?</h3><p>Youths aged 15–35 with a passion to learn and grow.</p></div>
+        <div class="card"><h3>Is training free?</h3><p>Some programmes are fully sponsored while others have small fees.</p></div>
+        <div class="card"><h3>Do you provide certificates?</h3><p>Yes, participants receive certificates on completion.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="blog">
+    <div class="container">
+      <h2>Our Blog</h2>
+      <p>Coming soon: Stories, interviews, project updates and more!</p>
+    </div>
+  </section>
+  <section id="donate" class="section-light">
+    <div class="container">
+      <h2>Support Our Mission</h2>
+      <p>You can sponsor a student, donate tools, or fund a training programme.</p>
+      <p><strong>Bank Details:</strong><br>Account Name: Youth Development Centre<br>Bank: Zenith Bank<br>Account Number: 1234567890</p>
+      <a href="mailto:raymondokotie360@gmail.com?subject=Support Youth Centre" class="btn">Contact to Donate</a>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> 08124376126<br><strong>Email:</strong> raymondokotie360@gmail.com</p>
+      <a href="mailto:raymondokotie360@gmail.com" class="btn">Send an Email</a>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 Youth Development Centre. All Rights Reserved.
+  </footer>
+</body>
+</html>
