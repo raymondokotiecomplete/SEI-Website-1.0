@@ -1,0 +1,216 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@400;600&display=swap');
+
+/* Root Variables */
+:root {
+  --primary-color: #f8efe5;         /* Creamy background */
+  --accent-color: #1e3d59;          /* Deep blue */
+  --secondary-color: #ffc107;       /* Golden yellow */
+  --text-color: #333;
+  --heading-font: 'Merriweather', serif;
+  --body-font: 'Poppins', sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: var(--accent-color);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* Navigation */
+nav {
+  background: var(--accent-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #f8efe5, #fff8ee);
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: var(--secondary-color);
+  color: #fff;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.hero .btn:hover {
+  background: #e0a800;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Team Cards, Gallery, Services, Testimonials etc. */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  background: var(--accent-color);
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.gallery-item {
+  background: #ddd;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+}
+blockquote {
+  background: #f0f0f0;
+  padding: 20px;
+  margin: 10px auto;
+  border-left: 5px solid #ccc;
+  max-width: 600px;
+}
+.faq-item {
+  margin-bottom: 15px;
+}
+.donate {
+  background: #fff8ec;
+  padding: 20px;
+  border: 1px solid #f1e2cc;
+  border-radius: 8px;
+}
+.share-buttons a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  background: #0077cc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.share-buttons a:hover {
+  background: #005fa3;
+}
