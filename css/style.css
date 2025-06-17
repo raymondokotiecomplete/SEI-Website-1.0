@@ -1,6 +1,0 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #fdfaf5; color: #333; }
-header { background: #4a2e00; color: white; padding: 1rem; text-align: center; }
-.team, .faq, .donate, .register-form { max-width: 700px; margin: 0 auto; padding: 1rem; background: #fff8ec; border-radius: 10px; }
-.member, .faq-item, .donate li, form label { margin: 1rem 0; }
-button { padding: 0.5rem 1rem; background: #d69e2e; border: none; color: white; border-radius: 5px; cursor: pointer; }
-button:hover { background: #b68c23; }
