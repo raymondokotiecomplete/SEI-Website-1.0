@@ -123,4 +123,15 @@ if (registrationForm) {
     this.reset();
   });
 }
+// Toggle social sidebar on mobile
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".social-toggle-btn");
+  const sidebar = document.querySelector(".social-sidebar");
+
+  if (toggleBtn && sidebar) {
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("show");
+    });
+  }
+});
 
