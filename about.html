@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Success Enterprise Innovations</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container logo-container">
+      <img src="images/sei-logo.png" alt="SEI Logo" class="logo" />
+      <div class="site-title">
+        <h1>Success Enterprise Innovations</h1>
+        <p class="tagline">Creative Empowerment. Infinite Possibilities.</p>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('show');">☰</button>
+    </div>
+
+    <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+
+    <!-- ✅ Shared Navigation -->
+    <nav>
+      <div id="main-nav"></div>
+    </nav>
+  </header>
+
+  <main class="container animate" style="padding: 60px 20px;">
+    <h2>About SE Innovations</h2>
+    <p>
+      Success Enterprise Innovations (SE Innovations) is a youth development platform with a mission to raise youths who will change their lives and the world through intentional development. Our approach is holistic, covering spiritual, mental, physical, and financial growth.
+    </p>
+    <p>
+      We believe every youth has greatness within. Through skill acquisition, training, mentorship, and practical initiatives, we ignite their potential and help them discover purpose. SE Innovations is a movement that inspires creativity, character, and contribution.
+    </p>
+  </main>
+
+  <!-- ✅ Shared Footer -->
+  <div id="main-footer"></div>
+
+  <!-- ✅ JavaScript to Load Nav and Footer -->
+  <script>
+    // Load navigation
+    fetch('partials/nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('main-nav').innerHTML = data;
+
+        // Enable mobile nav toggle AFTER nav is loaded
+        const toggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (toggle && navLinks) {
+          toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+          });
+        }
+      });
+
+    // Load footer
+    fetch('partials/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('main-footer').innerHTML = data;
+      });
+  </script>
+
+  <!-- Animate on scroll -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const animatedEls = document.querySelectorAll(".animate");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      animatedEls.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <!-- Your site JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
