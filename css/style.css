@@ -469,17 +469,18 @@ form button.btn:hover {
     width: 100%;
   }
 }
-.social-icons {
-  margin-top: 1rem;
+.social-icons.white-style {
+  margin-top: 10px;
 }
 
-.social-icons a {
-  font-size: 1.2rem;
+.social-icons.white-style a {
   color: white;
-  margin: 0 10px;
+  margin: 0 6px;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
+.social-icons.white-style a:hover {
   color: #ffda77;
 }
+
