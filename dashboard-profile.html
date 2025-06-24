@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Profile</title>
+
+  <!-- ✅ Correctly linked stylesheet and script -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>SEI</h2>
+        <button class="close-sidebar" onclick="toggleSidebar()">✕</button>
+      </div>
+      <nav>
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="dashboard-profile.html" class="active">🙍 Profile</a>
+        <a href="dashboard-programs.html">📘 Programs</a>
+        <a href="dashboard-certificates.html">🎓 Certificates</a>
+        <a href="dashboard-payments.html">💳 Payments</a>
+        <a href="logout.html">🚪 Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="dashboard-header">
+        <h1>My Profile</h1>
+        <div class="actions">
+          <button onclick="toggleTheme()">🌙</button>
+          <button class="toggle-sidebar-btn" onclick="toggleSidebar()">☰</button>
+        </div>
+      </header>
+
+      <!-- Profile Section -->
+      <section class="profile-section">
+        <div class="profile-card">
+          <div class="profile-picture">
+            <img src="assets/profile-placeholder.png" alt="Profile" id="profile-img"/>
+            <input type="file" id="upload-profile" accept="image/*" onchange="previewProfileImage(event)"/>
+            <label for="upload-profile">Change Photo</label>
+          </div>
+
+          <form class="profile-form">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Raymond Oke Okotie" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="raymondokotie360@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="+2348124376126" />
+            </div>
+            <div class="form-group">
+              <label>Location</label>
+              <input type="text" placeholder="Nigeria" />
+            </div>
+
+            <button type="submit" class="btn-primary">Save Changes</button>
+          </form>
+        </div>
+
+        <!-- Stats -->
+        <div class="account-stats">
+          <div class="stat-box">
+            <h3>📘 5</h3>
+            <p>Programs Enrolled</p>
+          </div>
+          <div class="stat-box">
+            <h3>💳 3</h3>
+            <p>Payments Made</p>
+          </div>
+          <div class="stat-box">
+            <h3>🎓 2</h3>
+            <p>Certificates</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

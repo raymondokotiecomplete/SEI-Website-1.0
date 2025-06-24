@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard - Success Enterprise</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- 🔵 Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="images/sei-logo.png" alt="Logo" />
+        <h2>SEI Portal</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="active">🏠 Dashboard</a>
+        <a href="dashboard-profile.html">👤 Profile</a>
+        <a href="dashboard-programs.html">📚 Enrolled Programs</a>
+        <a href="dashboard-progress.html">📈 Progress</a>
+        <a href="dashboard-certificates.html">🎓 Certificates</a>
+        <a href="index.html">🔙 Back to Site</a>
+      </nav>
+    </aside>
+
+    <!-- 🔶 Main Content Area -->
+    <main class="main-dashboard">
+      
+      <!-- 🔷 Top Header -->
+      <header class="dashboard-header">
+        <div class="user-info">
+          <img src="images/user-default.png" alt="User Photo" class="user-photo" />
+          <span class="username">Welcome, Raymond</span>
+        </div>
+      </header>
+
+      <!-- 🟨 Dashboard Welcome Section -->
+      <section class="dashboard-welcome">
+        <h1>Dashboard Overview</h1>
+        <p>This is your central dashboard to view and manage your training journey.</p>
+
+        <!-- 🟩 Dashboard Cards -->
+        <div class="dashboard-cards">
+          <div class="card">
+            <h3>3</h3>
+            <p>Enrolled Programs</p>
+          </div>
+          <div class="card">
+            <h3>78%</h3>
+            <p>Average Progress</p>
+          </div>
+          <div class="card">
+            <h3>1</h3>
+            <p>Certificate Earned</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

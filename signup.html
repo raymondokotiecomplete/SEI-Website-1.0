@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module">
+    // Firebase config
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBDQSHlOGxjT0_4D0FSZZ8dQGQuCLRaDlw",
+  authDomain: "sei-dashboard.firebaseapp.com",
+  projectId: "sei-dashboard",
+  storageBucket: "sei-dashboard.firebasestorage.app",
+  messagingSenderId: "600598994892",
+  appId: "1:600598994892:web:b6d55939bb11ab80aa8769"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    window.signUp = function() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Signup successful!");
+          window.location.href = "dashboard.html";
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    };
+  </script>
+</head>
+<body>
+  <h2>Sign Up</h2>
+  <input type="email" id="email" placeholder="Email" /><br />
+  <input type="password" id="password" placeholder="Password" /><br />
+  <button onclick="signUp()">Create Account</button>
+  <p>Already have an account? <a href="login.html">Login</a></p>
+</body>
+</html>
